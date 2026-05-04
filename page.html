@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tải tool miễn phí</title>
+</head>
+<body style="text-align:center; margin-top:100px; font-family:sans-serif;">
+
+  <h2>Tải tool miễn phí</h2>
+  <p>Click bên dưới để tải</p>
+
+  <button id="goBtn" style="padding:15px 30px; font-size:18px;">
+    Tải ngay
+  </button>
+
+  <script>
+    document.getElementById("goBtn").onclick = () => {
+      const affiliate = "https://shopee.vn/your-affiliate-link";
+      const target = "https://drive.google.com/your-file";
+
+      const isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        window.location.href = target;
+
+        setTimeout(() => {
+          window.open(affiliate, "_blank");
+        }, 300);
+      } else {
+        window.open(affiliate, "_blank");
+        window.location.href = target;
+      }
+    };
+  </script>
+
+</body>
+</html>
